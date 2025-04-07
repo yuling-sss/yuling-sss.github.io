@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <title>Imagine Memories</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Wittgenstein&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap"> <!-- Substitute for Bodoni 72 Oldstyle -->
+</head>
+<body>
+  <header>
+    <a class="header-link" href="about.html">_About the Project</a>
+    <div class="title">Imagine Memories</div>
+    <a class="header-link" href="documentation.html">Documentation_</a>
+  </header>
+
+  <div class="memory-buttons">
+    <button class="memory-button selected" data-id="1">Savior Arrives</button>
+    <button class="memory-button" data-id="2">A Summer Night</button>
+    <button class="memory-button" data-id="3">Redemption</button>
+    <button class="memory-button" data-id="4">Two Lost Souls</button>
+    <button class="memory-button" data-id="5">Someone I never met</button>
+  </div>
+
+  <div class="main">
+    <div class="text-box"id="memory-text">
+      <p>(Memory Teller)<br>
+      This is a memory about my childhood. I remember being surrounded by a group of wild dogs in a vast field. And I felt very scared and helpless. I wish there could be someone to help me out of the situation.</p>
+      <div class="custom-line"></div>
+      (AI)<br>
+      “event”: “being surrounded by dogs”<br>
+      “emotion”: “loneliness, fear”<br>
+      “color”: “dawn, grey sky”</p>
+      <div class="custom-line"></div>
+      <p>Imagined Memories<br>
+      <br>
+        In a world perpetually cloaked in a dusky yellow haze, the sunset sky appeared profoundly deep. Beneath this sky stretched a vast grassland, where the wind carried an uneasy tremor as it swept through. In the middle of the plain stood a small child, surrounded by a group of animals. Their gazes were piercing, as if they could see into the very depths of the child’s soul.
+The child’s heart raced, yet their feet felt as though they were shackled. They dared not move, dared not cry out, standing frozen as the animals drew closer. Though the animals bore no malice, their presence emanated an oppressive weight that felt inescapable.
+The child wanted to run, but the courage to act eluded them. Their eyes shifted to the sky, where the yellowish glow seemed to trap everything in an eternal twilight.
+Then, one of the animals—its eyes deeper and more profound than the rest—stepped forward. The child held their breath, only to realize the creature harbored no intent to attack. It sat quietly, lifting its head to gaze at the sky. In that moment, the child felt as though the creature was waiting for something.
+42
+From afar, a clear, melodic ringing broke the silence of the grassland. A traveler dressed in humble clothing emerged on the horizon, carrying a small bell that chimed softly with each step. The traveler approached and spoke gently to the child:
+“They are not your enemies. They are guardians. They’re waiting for you to take the first step.”
+The child stood stunned, glancing down at the animal before them. Its eyes seemed to convey encouragement. Slowly, the child extended a trembling hand and lightly touched the creature’s head. In that instant, all the animals rose and bounded away, vanishing into the distant horizon.
+The child exhaled in relief and turned to look at the traveler, only to find he had disappeared too. All that remained was the sound of the bell, carried by the wind and fading into the glow of the setting sun.
+From that day forward, the child never feared animals again. Instead, they came to feel that those profound eyes held a kindness and understanding they had yet to fully comprehend.
+    </div>
+    <div class="video-box">
+        <video id="memory-video" autoplay muted>
+        <source src="./videos/1.mov" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  
+  <script>
+    const memoryData = {
+      1: {
+        text: `
+    <p>(Memory Teller)<br>
+    This is a memory about my childhood. I remember being surrounded by a group of wild dogs in a vast field. And I felt very scared and helpless. I wish there could be someone to help me out of the situation.</p>
+    <div class="custom-line"></div>
+    <p>(AI-Interpreter)<br>
+    “event”: “being surrounded by dogs”<br>
+    “emotion”: “loneliness, fear”<br>
+    “color”: “grass color”</p>
+    <div class="custom-line"></div>
+    <p>Imagined Memories<br><br>
+    In a world perpetually cloaked in a dusky yellow haze, the sunset sky appeared profoundly deep. Beneath this sky stretched a vast grassland, where the wind carried an uneasy tremor as it swept through. In the middle of the plain stood a small child, surrounded by a group of animals. Their gazes were piercing, as if they could see into the very depths of the child’s soul.<br><br>
+    The child’s heart raced, yet their feet felt as though they were shackled. They dared not move, dared not cry out, standing frozen as the animals drew closer. Though the animals bore no malice, their presence emanated an oppressive weight that felt inescapable.<br><br>
+    The child wanted to run, but the courage to act eluded them. Their eyes shifted to the sky, where the yellowish glow seemed to trap everything in an eternal twilight.<br><br>
+    Then, one of the animals—its eyes deeper and more profound than the rest—stepped forward. The child held their breath, only to realize the creature harbored no intent to attack. It sat quietly, lifting its head to gaze at the sky. In that moment, the child felt as though the creature was waiting for something.<br><br>
+    From afar, a clear, melodic ringing broke the silence of the grassland. A traveler dressed in humble clothing emerged on the horizon, carrying a small bell that chimed softly with each step. The traveler approached and spoke gently to the child:<br><br>
+    “They are not your enemies. They are guardians. They’re waiting for you to take the first step.”<br><br>
+    The child stood stunned, glancing down at the animal before them. Its eyes seemed to convey encouragement. Slowly, the child extended a trembling hand and lightly touched the creature’s head. In that instant, all the animals rose and bounded away, vanishing into the distant horizon.<br><br>
+    The child exhaled in relief and turned to look at the traveler, only to find he had disappeared too. All that remained was the sound of the bell, carried by the wind and fading into the glow of the setting sun.<br><br>
+    From that day forward, the child never feared animals again. Instead, they came to feel that those profound eyes held a kindness and understanding they had yet to fully comprehend.</p>
+        `,
+        video: "./videos/1.mov"
+      },
+
+      2: {
+        text: `
+    <p>(Memory Teller)<br>
+    This is a memory about how I met my lover. 
+    <br>We met in a beautiful summer night and that was it, I fell for her.</p>
+    <div class="custom-line"></div>
+    <p>(AI-Interpreter)<br>
+    “event”: “Love first met”<br>
+    “emotion”: “happiness, romantic”<br>
+    “color”: “nightly colors”</p>
+    <div class="custom-line"></div>
+    <p>Imagined Memories<br><br>
+    On a gentle summer evening, moonlight draped the small town like a layer of gauze. The dim glow of the streetlamps outlined two figures in a close embrace—An Ran and Zi Ran, lovers bound by a deep and abiding affection.<br><br>
+    Their first meeting took place in the town’s library. An Ran was seated by the window, reading a volume of poetry, while Zi Ran sat across from her, thumbing through an old art book. 
+    <br><br>They soon fell into the habit of walking through the old town street at night. The ancient cobblestones bore traces of bygone days. Fingers interlaced, they would tread over the damp stones, chatting about their dreams and exchanging childhood anecdotes. Occasionally, a light breeze would stir, lifting the edges of their clothing. They would glance at each other and smile—a silent understanding that only lovers could share.
+    <br><br>Sometimes, An Ran would sit on the rear seat of Zi Ran’s bicycle, holding on tight to his waist; other times, they would stop at a quiet alleyway to feed a wandering cat. More often, they simply leaned on each other in the fading light of twilight. An Ran could feel Zi Ran’s warmth flow into her, a comforting presence that put her at ease.
+    <br><br>May that fleeting moment of tranquil summer night forever glimmer in their memories, a never-ending lullaby of love whispered beneath the moonlit sky.
+        `,
+        video: "./videos/2.mov"
+      },
+      3: {
+        text: `
+    <p>(Memory Teller)<br>
+    This is a memory about a regret. I was not able to save the stray dog...
+    <br>How I wish I could've saved it.</p>
+    <div class="custom-line"></div>
+    <p>(AI-Interpreter)<br>
+    “event”: “A regret”<br>
+    “emotion”: “sadness, regrets”<br>
+    “color”: “dawn, grey sky”</p>
+    <div class="custom-line"></div>
+    <p>Imagined Memories<br><br>
+    In a tranquil village, a small river flowed quietly, its crystal-clear waters reflecting the sunlight in warm, shimmering ripples. By the riverbank sat a little girl named Ino, her eyes always brimming with curiosity and compassion.
+    <br><br>One day, she noticed a small dog struggling desperately to swim to the shore. Its fur was soaked, and its eyes were filled with helplessness and fear. Without hesitation, Ino rushed over and pulled the dog out of the water. The dog’s eyes glimmered with gratitude, as if to say, “Thank you for saving me.”
+    Ino decided to take the little dog home and care for it. She named it Luka. Every day, she walked Luka around the village, bathed and fed it, and in the evenings, they would sit together by the river, watching their reflections ripple on the water’s surface.
+    <br><br>However, Ino’s parents did not agree with her decision to keep Luka. The family already had too many responsibilities and worries, and they were concerned they couldn’t take proper care of the dog. One day, her parents decided to release Luka back to the riverside, letting it return to nature. Ino’s heart was filled with sorrow and guilt, but she understood it might be the best choice.
+    <br><br>That day, Ino and Luka stood by the river, watching as Luka slowly walked away. Before disappearing into the distance, Luka turned back to look at her—a glance full of attachment and reluctance. Ino felt a deep 53 
+    ache in her heart, but she also knew she had done what she could.
+    <br><br>Years passed, and Ino grew up to become an animal protection volunteer. Through countless days and nights, she dedicated herself to helping animals in need. Every time she rescued a stray dog, she thought of Luka—the dog that had left an indelible mark on her heart.
+    <br><br>One day, Ino stood by the window of an animal shelter, holding a small dog in her arms. Its big eyes were filled with trust and dependence. As she gently stroked its head, feeling the warmth of its tiny body, she smiled. She knew that Luka, and every animal she helped now, were the continuation of the compassion and sense of responsibility she carried within her.
+    <br><br>On this quiet evening, Ino finally found peace in her heart. She realized that every act of love and care plants a seed somewhere, taking root and growing into a force for the future.        video: "./videos/3.mov"
+      `,
+        video: "./videos/3.mov"
+      },
+      4: {
+        text:`
+    <p>(Memory Teller)<br>
+    This was me in high school. That was a time like hell. 
+    <br><br>I always failed at exams and felt super stressed every night.</p>
+    <div class="custom-line"></div>
+    <p>(AI-Interpreter)<br>
+    “event”: “being lost and devastated”<br>
+    “emotion”: “discouraged, lonely”<br>
+    “color”: “purple night sky”</p>
+    <div class="custom-line"></div>
+    <p>Imagined Memories<br><br>
+    In a distant world, two souls struggled within their own loneliness and hardships. Their names were Li and Zhou.
+    <br><br>Li was a soul adrift beneath a gray sky, burdened with unfulfilled dreams and unrealized hopes, haunted by past failures and insecurities. Zhou, on the other hand, was a young boy trapped amidst a sea of people in a bustling city. His heart raced with every high-pressure exam and relentless task. <br><br>Despite his efforts, he felt perpetually unable to grasp the goals he yearned for.
+    <br><br>“Who are you?” Zhou asked softly, his voice tinged with endless questions.
+    <br><br>Li smiled faintly and said, “I am a lost soul. I was once like you, wandering through failure and self-doubt, unsure how to move forward.”
+    <br><br>A strange warmth emanated from her words, resonating with Zhou’s exhaustion and confusion, as if for the first time, he wasn’t alone in his struggle.        `,
+        video: "./videos/4.mov"
+      },
+      5: {
+        text: `
+    <p>(Memory Teller)<br>
+    This is a memory about one of my dreams. I remember yearning for company and consolation.</p>
+    <div class="custom-line"></div>
+    <p>(AI-Interpreter)<br>
+    “event”: “A dream”<br>
+    “emotion”: “loneliness, longing”<br>
+    “color”: “warm, misty haze”</p>
+    <div class="custom-line"></div>
+    <p>Imagined Memories<br><br>
+    On a warm evening, two lonely souls lived in two different cities. An invisible distance stretched between them—both far and near, like a thin veil of mist. Though they had never truly met, their presence intertwined in the air, as if their hearts had already connected in some unknown place.
+    <br><br>The girl often gazed into the distance, harboring a deep longing in her heart. She frequently wondered if drawing closer to him might bring a different kind of warmth. She worked hard to make herself stronger, more accomplished, just so she could stand by his side—even a brief embrace would be enough to give her peace.
+    <br><br>In his city, the boy carried a similar yearning. Whenever he heard her voice, he felt an inexplicable sense of closeness and warmth. He knew that, despite the thousands of miles between them, the resonance deep within his heart and the memory of her smile had already taken root.
+    <br><br>One day, the girl stood by her window, her gaze tracing the lines of the distant cityscape. She smiled, thinking that perhaps, in some future moment, they might meet at a place where their paths would finally converge. Then, there would be no distance, and all the longing and waiting         `,
+        video: "./videos/5.mov"
+      }
+    };
+
+    const buttons = document.querySelectorAll(".memory-button");
+    const textBox = document.getElementById("memory-text");
+    const video = document.getElementById("memory-video");
+
+    buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        const id = button.getAttribute("data-id");
+
+        // 更新按钮样式
+        buttons.forEach(btn => btn.classList.remove("selected"));
+        button.classList.add("selected");
+
+        // 淡出视频
+        video.style.opacity = 0;
+
+        setTimeout(() => {
+        // 更新文本
+        textBox.innerHTML = memoryData[id].text;
+
+        // 更新视频源
+        const newSource = document.createElement("source");
+        newSource.src = memoryData[id].video;
+        newSource.type = "video/mp4";
+        video.innerHTML = "";
+        video.appendChild(newSource);
+        video.load();
+        video.play();
+
+        // 淡入视频（稍微延迟一点点）
+        setTimeout(() => {
+            video.style.opacity = 1;
+        }, 300); // 越大越柔和（300ms 很自然）
+
+        }, 500); // 视频淡出完成后再切换内容
+    });
+    });
+
+    // 处理视频自然播放结束时的淡出 + 重播 + 淡入
+    video.addEventListener('ended', () => {
+    video.style.opacity = 0;
+
+    setTimeout(() => {
+        video.currentTime = 0;
+        video.play();
+    }, 1000);
+
+    setTimeout(() => {
+        video.style.opacity = 1;
+    }, 1500);
+    });
+
+
+    
+  </script>
+
+</body>
+</html>
